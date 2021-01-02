@@ -70,7 +70,7 @@ export class GameComponent implements AfterViewInit {
 
       this._costTotal$.next({
         label: s.date,
-        value: s.stats.costTotal,
+        value: s.stats.costs.total,
       });
 
       this._infectedToday$.next({
