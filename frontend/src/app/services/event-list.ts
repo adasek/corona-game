@@ -300,7 +300,8 @@ export const eventTriggers: EventTrigger[] = [
         text: 'Je třeba se rozhodnout, zda budou investovány peníze do propagace očkování proti koronaviru.',
         help: 'Investice do kampaně pro očkování zvýší zájem o vakcinaci a tím pádem její rychlost. Je na ni však třeba vydat další náklady a zároveň se při možném neúspěchu kampaně negativně podepíše na společenské stabilitě. Odmítnutí proma vakcinaci zpomalí.',
         mitigations: [
-          // todo: check the numbers
+          // todo: should desintegrate one next Antivax event
+          // todo: check the numbers (specification document is vague about the numbers)
           {label: 'Investovat do propagace vakcín', vaccinationPerDay: 1000, cost: 5, timeout: 1},
           {label: 'Neinvestovat', vaccinationPerDay: -1000, timeout: 1},
           ],
