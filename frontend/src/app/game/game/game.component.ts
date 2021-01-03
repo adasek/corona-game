@@ -13,6 +13,8 @@ import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
   styleUrls: ['./game.component.scss'],
 })
 export class GameComponent implements AfterViewInit {
+  initialized = false;
+
   costTotalCustomOptions: ChartOptions = {
     scales: {
       yAxes: [{
@@ -53,6 +55,8 @@ export class GameComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    setTimeout(() => this.initialized = true);
+
     this.gameService.restartSimulation();
     this.gameService.gameState$.pipe(
       untilDestroyed(this),
